@@ -1,0 +1,10 @@
+{
+  "name": "images-to-ppt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal helper for turning a folder of images into a PowerPoint deck.",
+  "main": "create-image-deck.cjs",
+  "scripts": {
+    "start": "node create-image-deck.cjs"
+  }
+}
