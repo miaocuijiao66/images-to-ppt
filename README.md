@@ -1,10 +1,8 @@
-﻿# images-to-ppt
+# Images to PPT
 
-Personal helper for turning a folder of images into a PowerPoint deck.
+A small local helper for turning a folder of images into a PowerPoint deck.
 
-This project is mainly for my own workflow. It keeps the existing
-`@oai/artifact-tool` dependency used by the current script, so it is not meant
-to be a fully portable npm package.
+I created this tool for my own workflow when preparing slide materials from image batches. It is mainly a personal automation script rather than a fully packaged public npm tool.
 
 ## Usage
 
@@ -26,19 +24,15 @@ Arguments:
 
 ## Behavior
 
-- Supports common image formats such as `.jpg`, `.jpeg`, `.png`, `.bmp`,
-  `.gif`, `.tif`, `.tiff`, and `.webp`.
-- Sorts images by file modified time from oldest to newest, then by filename
-  for ties.
-- Creates one slide per image.
-- Uses a 16:9 white slide with the image contained inside the full slide area.
+- Supports `.jpg`, `.jpeg`, `.png`, `.bmp`, `.gif`, `.tif`, `.tiff`, and `.webp`.
+- Sorts images by modified time, then filename.
+- Creates one 16:9 slide per image.
+- Fits each image inside a white full-slide frame without cropping.
 
-## Notes Before Uploading
+## Notes
 
-Generated files are intentionally ignored:
+This repository records a personal local workflow tool. Some dependencies may be environment-specific, so the script may need adaptation before reuse in a standard Node.js environment.
 
-- `tmp/`
-- `*.pptx`
+Generated and temporary files are ignored, including `tmp/`, `images/`, and `*.pptx`.
 
-The `tmp/` folder can contain local absolute paths and rendered previews, so it
-should not be committed.
+The `tmp/` folder may contain local absolute paths and rendered previews, so it should not be committed.
